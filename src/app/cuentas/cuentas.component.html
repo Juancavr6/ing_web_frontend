@@ -1,38 +1,10 @@
-<mat-table [dataSource]="dataSource">
+<form action="#" method="post">
+  <label for="username">Usuario:</label>
+  <input type="text" id="username" name="username" required>
 
-    <ng-container matColumnDef="id">
-        <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
-        <mat-cell *matCellDef="let element" title="{{element.id}}">{{ element.id}} </mat-cell>
-      </ng-container>
+  <label for="password">Contraseña:</label>
+  <input type="password" id="password" name="password" required>
 
-    <ng-container matColumnDef="ccc">
-      <mat-header-cell *matHeaderCellDef> CCC </mat-header-cell>
-      <mat-cell *matCellDef="let element" title="{{element.ccc}}">{{ element.ccc}} </mat-cell>
-    </ng-container>
+  <button type="submit">Iniciar sesión</button>
+</form>
 
-    <ng-container matColumnDef="balance">
-      <mat-header-cell *matHeaderCellDef> Balance </mat-header-cell>
-      <mat-cell *matCellDef="let element" title="{{element.balance}}"> {{element.balance}} </mat-cell>
-    </ng-container>
-
-    <ng-container matColumnDef="view">
-      <mat-header-cell *matHeaderCellDef > View </mat-header-cell>
-      <mat-cell *matCellDef="let element">            
-        <a mat-icon-button title="View/edit cuenta" routerLink="/cuenta/{{element.id}}">
-          <mat-icon color="primary">visibility</mat-icon>
-        </a>
-      </mat-cell>
-    </ng-container>
-
-    <ng-container matColumnDef="delete">
-      <mat-header-cell *matHeaderCellDef> Delete </mat-header-cell>
-      <mat-cell *matCellDef="let element">            
-        <button mat-icon-button title="Delete cuenta" (click)="confirmDeletion(element.id)">
-          <mat-icon color="primary">delete</mat-icon>
-        </button>
-      </mat-cell>
-    </ng-container>
-
-    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-</mat-table>
