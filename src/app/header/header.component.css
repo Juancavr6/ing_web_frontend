@@ -1,4 +1,12 @@
 .material{
 
-    background-color: green;
+    background-color: #52D570;
+}
+#name{
+    font-family: "Arial Black","Gill Sans";
+    font-style: oblique;
+    font-size:xx-large;
+}
+#buttons{
+    margin-left: auto;
 }

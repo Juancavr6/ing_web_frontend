@@ -1,13 +1,18 @@
 <mat-toolbar color="primary" class="material">
-    <span>
+    <span id="name">
       E-CARE
+      <mat-icon>healing</mat-icon>
     </span>
-    <button mat-button routerLink="/">Home
-        <mat-icon>dashboard</mat-icon> </button>
-    <button mat-button routerLink="/create">Create
-        <mat-icon>book</mat-icon>
-    </button>
-    <button mat-button>Logout
-        <mat-icon>logout</mat-icon>
-    </button>
+    <div id="buttons">
+        <button mat-button routerLink="/">Home
+            <mat-icon>dashboard</mat-icon> </button>
+        <button mat-button routerLink="/login">Acceder
+            <mat-icon>login</mat-icon>
+        </button>
+    </div>
 </mat-toolbar>
+
+<!--        <button mat-button routerLink="/create">Create
+            <mat-icon>flip_to_back</mat-icon>
+        </button>
+    -->
