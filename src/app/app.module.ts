@@ -21,6 +21,9 @@ import {MatInputModule} from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 import { MatDialogModule, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { InicioComponent } from './inicio/inicio.component';
+import { LoginComponent } from './login/login.component';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +31,9 @@ import { MatDialogModule, MatDialogRef, MAT_DIALOG_DATA } from '@angular/materia
     HeaderComponent,
     CuentasComponent,
     CreateCuentaComponent,
-    ConfirmDialogComponent
+    ConfirmDialogComponent,
+    InicioComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

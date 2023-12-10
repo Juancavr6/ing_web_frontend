@@ -1,12 +1,27 @@
 .material{
-
-    background-color: #52D570;
+    display: flex;
+    justify-content: center; /* Alinea los elementos horizontalmente en el centro */
+    align-items: center;
+    background-color: #21b78d;
 }
-#name{
-    font-family: "Arial Black","Gill Sans";
+.name{
+    font-family: "DejaVu Sans Mono", monospace;
+    color: #2e302f ;
     font-style: oblique;
     font-size:xx-large;
+    font-weight: bold;
+    font-size: 270%;
+    
+}
+#name1{
+    color: #ffff;
+}
+#icon{
+    color: #153f33;
+}
+.bt{
+    font-size: large;
 }
 #buttons{
-    margin-left: auto;
+    margin: 0 5%;
 }
