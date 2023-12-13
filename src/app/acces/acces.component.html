@@ -1,0 +1,17 @@
+<mat-card class="material">
+    <mat-card-header>
+        <mat-card-title>Acceder como</mat-card-title>
+    </mat-card-header>
+    <br>
+    <mat-card-content>
+        <div id="buttons">
+            <button mat-button routerLink="/login/medico"  (click)="changeType('medico')" class="bt">Médico   
+                <mat-icon>local_hospital</mat-icon> 
+            </button>
+            <br>
+            <button mat-button routerLink="/login/paciente"  (click)="changeType('paciente')" class="bt">Paciente    
+                <mat-icon>account_box</mat-icon>
+            </button>
+        </div>
+    </mat-card-content>
+</mat-card>

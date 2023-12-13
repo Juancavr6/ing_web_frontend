@@ -1,0 +1,33 @@
+.material{
+    width: 30%;
+    margin: auto;
+    padding: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    font-size: x-large;
+}
+#buttons{
+
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    
+    
+
+}
+.bt{
+    font-size: x-large;
+    color: #ffff;
+    background-color: #21b78d;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}

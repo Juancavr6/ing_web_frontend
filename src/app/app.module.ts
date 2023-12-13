@@ -23,6 +23,7 @@ import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.componen
 import { MatDialogModule, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { InicioComponent } from './inicio/inicio.component';
 import { LoginComponent } from './login/login.component';
+import { AccesComponent } from './acces/acces.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { LoginComponent } from './login/login.component';
     CreateCuentaComponent,
     ConfirmDialogComponent,
     InicioComponent,
-    LoginComponent
+    LoginComponent,
+    AccesComponent
   ],
   imports: [
     BrowserModule,

@@ -1,10 +1,17 @@
-.login-wrapper {
+.box {
     width: 30%;
     margin: auto;
     padding: auto;
     text-align: center;
     align-items: center;
-    justify-content: center;
+
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
+
+mat-form-field {
+    width : 80%; 
+ }
+.inputclass{
+    width : 100%;
+ }
