@@ -25,6 +25,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { LoginComponent } from './login/login.component';
 import { AccesComponent } from './acces/acces.component';
 import { PacienteComponent } from './paciente/paciente.component';
+import { UpdateParametrosComponent } from './update-parametros/update-parametros.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { PacienteComponent } from './paciente/paciente.component';
     InicioComponent,
     LoginComponent,
     AccesComponent,
-    PacienteComponent
+    PacienteComponent,
+    UpdateParametrosComponent
   ],
   imports: [
     BrowserModule,

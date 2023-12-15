@@ -1,0 +1,58 @@
+<div class="container">
+<mat-card class="material">
+    <mat-card-title>
+        <div >Actualizar parámetros </div>
+    </mat-card-title>
+    
+    <form class="create-model-form" #form="ngForm" (ngSubmit)="onSubmit()" autocomplete="off">
+        <br>
+        <div class="col">
+            <mat-form-field class="f-input" >
+                <mat-label >Altura</mat-label>
+                <input matInput type="number"  required placeholder="Altura"  name="altura" [(ngModel)]="parametros.altura">
+            </mat-form-field>
+            <br>
+            <mat-form-field class="f-input">
+                <mat-label >Peso</mat-label>
+                <input matInput type="number" placeholder="Peso" required name="peso"  [(ngModel)]="parametros.peso">
+            </mat-form-field>
+            <br>
+            <mat-form-field class="f-input">
+                <mat-label >Glucosa</mat-label>
+                <input matInput type="number" placeholder="Glucosa" required name="glucosa"  [(ngModel)]="parametros.glucosa">
+            </mat-form-field>
+            <br>
+            <mat-form-field class="f-input">
+                <mat-label >Frecuencia Cardiaca</mat-label>
+                <input matInput type="number" placeholder="Frecuencia Cardiaca" required name="frecuenciaCardiaca"  [(ngModel)]="parametros.frecuenciaCardiaca">
+            </mat-form-field>
+        </div>
+        <div class="col">
+
+            <mat-form-field class="f-input">
+                <mat-label >Presión Sistólica</mat-label>
+                <input matInput type="number" placeholder="Presión Sistólica" required name="presionSis"  [(ngModel)]="parametros.presionSis">
+            </mat-form-field>
+            <br>
+            <mat-form-field class="f-input">
+                <mat-label >Presión Diastólica</mat-label>
+                <input matInput type="number" placeholder="Presión Diastólica" required name="presionDia"  [(ngModel)]="parametros.presionDia">
+            </mat-form-field>
+            <br>
+            <mat-form-field class="f-input">
+                <mat-label >Colesterol</mat-label>
+                <input matInput type="number" placeholder="Colesterol" required name="colesterol"  [(ngModel)]="parametros.colesterol">
+            </mat-form-field>
+
+        </div>
+        <br>
+        <div class="buttons">
+            <span class="spacer"></span>
+            <button type="submit" class="form-btn" [disabled]="form.invalid" mat-raised-button style="color:#ffff;" [ngStyle]="{'background-color': form.invalid ? '#F0F0F0' : '#21b78d'}">
+            <div>Aplicar cambios</div>
+            </button>
+            <a  class="form-btn" (click)="back()" style="background-color: #21b78d;color:#ffff;" mat-button>Volver</a>
+        </div>          
+    </form> 
+</mat-card>
+</div>
