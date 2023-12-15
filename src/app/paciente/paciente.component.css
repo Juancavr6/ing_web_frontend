@@ -1,0 +1,12 @@
+.bar{
+ background-color: #21b78d;
+}
+#buttons{
+    margin: auto;
+    color: #ffff;
+}
+.bt{
+    font-size: large;
+    background-color: #116950;
+    margin: 5%;
+}

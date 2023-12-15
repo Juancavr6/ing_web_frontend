@@ -1,0 +1,72 @@
+<div class="container">
+    <mat-card class="material">
+        <mat-card-header>
+            <mat-card-title>Bienvenido {{ name }}</mat-card-title>
+        </mat-card-header>
+        <br>
+        <mat-card-content>
+            <mat-card-subtitle style="text-decoration: underline;">Tus parámetros:</mat-card-subtitle>
+            
+            <mat-table [dataSource]="dataSource" style=" border: 1px solid #ccc">
+                <ng-container matColumnDef="id">
+                    <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
+                    <mat-cell *matCellDef="let element" title="{{element.id}}">{{ element.id}} </mat-cell>
+                  </ng-container>
+              
+                <ng-container matColumnDef="altura">
+                  <mat-header-cell *matHeaderCellDef> Altura </mat-header-cell>
+                  <mat-cell *matCellDef="let element" title="{{element.ccc}}">{{ element.altura}} </mat-cell>
+                </ng-container>
+              
+                <ng-container matColumnDef="peso">
+                  <mat-header-cell *matHeaderCellDef> Peso </mat-header-cell>
+                  <mat-cell *matCellDef="let element" title="{{element.balance}}"> {{element.peso}} </mat-cell>
+                </ng-container>
+              
+                <ng-container matColumnDef="glucosa">
+                    <mat-header-cell *matHeaderCellDef> Glucosa </mat-header-cell>
+                    <mat-cell *matCellDef="let element" title="{{element.glucosa}}"> {{element.glucosa}} </mat-cell>
+                  </ng-container>
+              
+                <ng-container matColumnDef="frecuenciaCardiaca">
+                  <mat-header-cell *matHeaderCellDef> Frecuencia Cardiaca </mat-header-cell>
+                  <mat-cell *matCellDef="let element" title="{{element.frecuenciaCardiaca}}"> {{element.frecuenciaCardiaca}} </mat-cell>
+                </ng-container>
+              
+                <ng-container matColumnDef="presionSis">
+                    <mat-header-cell *matHeaderCellDef> Presión Sistólica </mat-header-cell>
+                    <mat-cell *matCellDef="let element" title="{{element.presionSis}}"> {{element.presionSis}} </mat-cell>
+                </ng-container>
+
+                <ng-container matColumnDef="presionDia">
+                    <mat-header-cell *matHeaderCellDef> Presión Diastólica </mat-header-cell>
+                    <mat-cell *matCellDef="let element" title="{{element.presionDia}}"> {{element.presionDia}} </mat-cell>
+                </ng-container>
+
+                <ng-container matColumnDef="colesterol">
+                    <mat-header-cell *matHeaderCellDef> Colesterol </mat-header-cell>
+                    <mat-cell *matCellDef="let element" title="{{element.colesterol}}"> {{element.colesterol}} </mat-cell>
+                </ng-container>
+
+                <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+              </mat-table>
+              <br>
+              <mat-card-subtitle style="text-decoration: underline;">Tus patologías:</mat-card-subtitle>
+              <br>
+              <span style="font-weight: bold;white-space: pre-line;"> {{enfermedadesToString()}} </span>
+
+        </mat-card-content>
+        
+    </mat-card>
+    <mat-toolbar class="bar">
+        <div id="buttons">
+            <button mat-button  class="bt">Mis Eventos
+                <mat-icon>event</mat-icon> </button>
+            <button mat-button  [routerLink]="['/paciente', userid, 'update']" class="bt">Actualizar parámetros
+                <mat-icon>note_add</mat-icon>
+            </button>
+        </div>
+    </mat-toolbar>
+</div>
+

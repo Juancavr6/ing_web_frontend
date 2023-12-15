@@ -24,6 +24,7 @@ import { MatDialogModule, MatDialogRef, MAT_DIALOG_DATA } from '@angular/materia
 import { InicioComponent } from './inicio/inicio.component';
 import { LoginComponent } from './login/login.component';
 import { AccesComponent } from './acces/acces.component';
+import { PacienteComponent } from './paciente/paciente.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { AccesComponent } from './acces/acces.component';
     ConfirmDialogComponent,
     InicioComponent,
     LoginComponent,
-    AccesComponent
+    AccesComponent,
+    PacienteComponent
   ],
   imports: [
     BrowserModule,

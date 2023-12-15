@@ -15,9 +15,11 @@ export class LoginComponent {
   userid: string = '';
   pass: string  = '';
   acceso:any = "enviar";
+  hasError = false
 
   constructor(private loginService: LoginService, 
-              private auxService: AssistService) 
+              private auxService: AssistService,
+              private router: Router) 
               { 
                 this.auxService.getUserType.subscribe(msg => this.tipo = msg)
                }
@@ -30,14 +32,15 @@ export class LoginComponent {
 
     this.loginService.getPassword(this.userid,this.tipo).subscribe({
       next: (data: any) => {
-        if(<string> this.pass == <string> data) {this.acceso = "correcto";}
-        else {this.acceso = "fallo"+this.pass;}
+        if(<string> this.pass == <string> data) {this.router.navigate(['/'+this.tipo+'/'+this.userid]);}
+        else {this.hasError = true;}
         
 
       },
       error: (e: any) => {
         const errorMessage = e.message || 'Error desconocido';
-        this.acceso = errorMessage
+        console.log(errorMessage);
+        this.hasError=true;
       }
     });
 

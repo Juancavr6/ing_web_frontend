@@ -5,19 +5,20 @@
     </mat-card-header>
   <div class="example-form" >
       <mat-card-content>
-        <mat-form-field class="field">
-          <mat-label>Usuario</mat-label>
+        <mat-form-field >
+          <mat-label [class.invalid]="hasError" >Usuario ID</mat-label>
           <input matInput required [(ngModel)]="userid" class="inputclass">
         </mat-form-field>
         <br>
-        <mat-form-field class="field">
-            <mat-label>Contraseña</mat-label>
+        <mat-form-field  >
+            <mat-label [class.invalid]="hasError">Contraseña</mat-label>
             <input matInput required [type]="hide ? 'password' : 'text'" class="inputclass" [(ngModel)]="pass">
+            <mat-hint class="error" *ngIf="hasError">Información incorrecta</mat-hint>
             <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide" >
               <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
             </button>
         </mat-form-field>
       </mat-card-content>
-      <button mat-stroked-button class="btn-block"  (click)="onSubmit()" type="submit">{{acceso}}</button>
+      <button mat-stroked-button class="btn-block"  (click)="onSubmit()" type="submit">Acceder</button>
     </div>
 </mat-card>
