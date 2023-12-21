@@ -24,6 +24,21 @@ export class PacienteService {
       ;
     }
 
+    getPacienteByMedico(id: any):any {
+      return this.httpClient.get<JSON>(this.url + '/medico/' + id )
+      ;
+    }
+
+    getEventoByPaciente(id: any):any {
+      return this.httpClient.get<JSON>(this.baseUrl + '/evento/paciente/' + id )
+      ;
+    }
+
+    getMedico(id: any):any {
+      return this.httpClient.get(this.baseUrl + '/medico/' + id , { responseType: 'text' })
+      ;
+    }
+
     updatePaciente(data: any){
       return this.httpClient.put(this.url, data)
     }
@@ -31,4 +46,10 @@ export class PacienteService {
     updateParametros(data: Parametros){
       return this.httpClient.put(this.url+'/update', data)
     }
+
+    addEventoPaciente(data : any){
+      return this.httpClient.post(this.baseUrl+'/evento', data)
+    }
+
+
 }

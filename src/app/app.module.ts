@@ -13,6 +13,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSnackBarModule, MatSnackBar} from '@angular/material/snack-bar'; 
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
+
 
 import { CuentasComponent } from './cuentas/cuentas.component';
 import { CreateCuentaComponent } from './create-cuenta/create-cuenta.component'; 
@@ -26,6 +29,10 @@ import { LoginComponent } from './login/login.component';
 import { AccesComponent } from './acces/acces.component';
 import { PacienteComponent } from './paciente/paciente.component';
 import { UpdateParametrosComponent } from './update-parametros/update-parametros.component';
+import { MedicoComponent } from './medico/medico.component';
+import {MatListModule} from '@angular/material/list';
+import { CalendarComponent } from './calendar/calendar.component';
+
 
 
 @NgModule({
@@ -39,7 +46,9 @@ import { UpdateParametrosComponent } from './update-parametros/update-parametros
     LoginComponent,
     AccesComponent,
     PacienteComponent,
-    UpdateParametrosComponent
+    UpdateParametrosComponent,
+    MedicoComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +64,10 @@ import { UpdateParametrosComponent } from './update-parametros/update-parametros
     MatFormFieldModule,
     MatInputModule,
     MatCardModule,
-    MatDialogModule
+    MatDialogModule,
+    MatListModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]

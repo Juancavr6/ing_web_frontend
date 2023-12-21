@@ -1,0 +1,53 @@
+<div class="container">
+    <mat-card class="material">
+
+        <mat-card-header>
+            <mat-card-title>Agenda de Paciente</mat-card-title>
+        </mat-card-header>
+        <br>
+
+        <mat-card-content id="content"> 
+            <div class="element" id="e1">
+                <button mat-button (click)="refresh()" id="bt">Mostrar eventos
+                    <mat-icon>pageview</mat-icon> 
+                </button>
+    
+                <mat-calendar #calendar [dateClass]="dateClass()" [(selected)]="selected" (selectedChange) = "dateChanged ($event)" ></mat-calendar>
+                
+                <br>
+
+                <h3>Evento seleccionado:</h3>
+                <input matInput  disabled="true" [value]="selected_event" class="mensaje">
+            </div>
+
+            <div class="element" id="e2">
+                <form class="create-model-form" id = "new" (ngSubmit)="onSubmit()" autocomplete="off" #form="ngForm">
+                    
+                    <h3>Programar nuevo evento:</h3>
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Fecha</mat-label>
+                        <input matInput required name="fecha" [matDatepicker]="picker" [(ngModel)]="new_fecha">
+                        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker [dateClass]="dateClass" #picker></mat-datepicker>
+                    </mat-form-field>
+
+                    <br>
+
+                    <mat-form-field class="f-input">
+                        <mat-label >Descripción</mat-label>
+                        <input matInput type="text" placeholder="Descripción" required name="descripcion" [(ngModel)]="new_descripcion" >
+                    </mat-form-field>
+
+                    <br>
+
+                    <button mat-button type="submit" class="form-btn" [disabled]="form.invalid" mat-raised-button [ngStyle]="{'background-color': form.invalid ? '#F0F0F0' : '#21b78d'}">
+                        Crear
+                        <mat-icon>add</mat-icon> 
+                    </button>
+                </form>
+            </div>
+        </mat-card-content>
+        
+    </mat-card>
+
+</div>

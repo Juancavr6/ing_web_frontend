@@ -1,0 +1,70 @@
+.container{
+    background-color: white;
+    padding-left: 2%;
+}
+
+.element{
+    width: 50%;
+    float: left;
+    
+}
+#e1{
+    background-color: rgb(255, 255, 255);
+    border-radius: 11px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);;
+}
+#bt{
+    margin: auto;
+    background-color: rgb(237, 237, 237);
+    margin-bottom: 2%;
+    margin-left: 22%;
+    margin-top:2%;
+    border-radius: 11px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);;
+}
+
+.mensaje{
+    width: 70%;
+    height: 70px;
+    font-size: large;
+    background-color: rgb(247, 247, 247);
+    border-radius: 11px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+}
+#e1 h3{
+    text-align: center;
+}
+#e1 input{
+    margin-left: 15%;
+}
+
+
+mat-calendar{
+    width: 55%;
+    border-radius: 11px;
+    margin: auto;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+    
+}
+
+
+#new{
+    padding-left: 20%;
+    margin-left: 2%;
+    border-radius: 11px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+}
+#new mat-form-field{
+    margin: auto;
+    width: 80%;
+}
+#new button{
+    margin: auto;
+    width: 80%;
+}
+
+button.class-verde {
+  background: #21b78d;
+  border-radius: 100%;
+}
+

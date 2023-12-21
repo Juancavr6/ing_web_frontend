@@ -7,11 +7,11 @@
         <mat-card-content>
             <mat-card-subtitle style="text-decoration: underline;">Tus parámetros:</mat-card-subtitle>
             
-            <mat-table [dataSource]="dataSource" style=" border: 1px solid #ccc">
+            <mat-table [dataSource]="dataSource" id="tabla" >
                 <ng-container matColumnDef="id">
                     <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
                     <mat-cell *matCellDef="let element" title="{{element.id}}">{{ element.id}} </mat-cell>
-                  </ng-container>
+                </ng-container>
               
                 <ng-container matColumnDef="altura">
                   <mat-header-cell *matHeaderCellDef> Altura </mat-header-cell>
@@ -61,7 +61,7 @@
     </mat-card>
     <mat-toolbar class="bar">
         <div id="buttons">
-            <button mat-button  class="bt">Mis Eventos
+            <button mat-button  [routerLink]="['/paciente', userid , 'calendario']" class="bt">Mis Eventos
                 <mat-icon>event</mat-icon> </button>
             <button mat-button  [routerLink]="['/paciente', userid, 'update']" class="bt">Actualizar parámetros
                 <mat-icon>note_add</mat-icon>

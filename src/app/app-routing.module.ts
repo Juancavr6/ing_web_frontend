@@ -9,6 +9,8 @@ import { LoginComponent } from './login/login.component';
 import { AccesComponent } from './acces/acces.component';
 import { PacienteComponent } from './paciente/paciente.component';
 import { UpdateParametrosComponent } from './update-parametros/update-parametros.component';
+import { MedicoComponent } from './medico/medico.component';
+import { CalendarComponent } from './calendar/calendar.component';
 
 const routes: Routes = [
   {path: '', component: InicioComponent},
@@ -18,6 +20,8 @@ const routes: Routes = [
   { path: 'create', component: CreateCuentaComponent },
   { path: 'paciente/:id', component: PacienteComponent },
   { path: 'paciente/:id/update', component: UpdateParametrosComponent },
+  { path: 'medico/:id', component: MedicoComponent },
+  { path: 'paciente/:id/calendario', component: CalendarComponent },
   {path: 'cuenta/:id', component: CreateCuentaComponent},
 ];
 

@@ -1,0 +1,35 @@
+<div class="container">
+    <mat-card class="material">
+        <mat-card-header>
+            <mat-card-title>Bienvenido {{name}}</mat-card-title>
+        </mat-card-header>
+        <br>
+        <mat-card-content id="content"> 
+            <mat-list  id="patients" >
+                <h2 matListItemTitle>Pacientes asignados</h2>
+                    <div *ngFor="let patient of patients">
+                        <br> 
+                        <mat-list-item>
+                            <div class="list-bt">
+                                <mat-icon>account_box</mat-icon>
+                                {{patient.nombre}}
+                            </div>
+                            <button  class="list-bt" [routerLink]="['/paciente', patient.id , 'calendario']"><mat-icon>date_range </mat-icon></button>
+                            <button  class="list-bt" [routerLink]="['/paciente', patient.id, 'update' ]"><mat-icon>note_add </mat-icon></button>                      
+                        </mat-list-item>          
+                    </div>
+            </mat-list>
+
+        </mat-card-content>
+        
+    </mat-card>
+
+    <mat-toolbar class="bar">
+        <div id="buttons">
+            <button mat-button  class="bt">Refrescar Pacientes
+                <mat-icon>refresh</mat-icon> 
+            </button>
+        </div>
+    </mat-toolbar>
+
+</div>

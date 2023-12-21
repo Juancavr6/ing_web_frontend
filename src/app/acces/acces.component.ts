@@ -11,6 +11,7 @@ export class AccesComponent {
 
   constructor(private auxService: AssistService) { }
   
+  //Cambian el tipo de login a paciente o medico
   changeType(type: any){
       this.auxService.setUserType(type)
   }

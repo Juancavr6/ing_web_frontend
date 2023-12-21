@@ -20,13 +20,14 @@ export class UpdateParametrosComponent {
                private _location: Location,
                private snackbar: MatSnackBar,){}
 
-   ngOnInit(){
+  ngOnInit(){
+    //Obtiene id desde url
     this.userid= this.route.snapshot.paramMap.get('id');
 
+    //Obtiene parametros desde /paciente/id/parametros
     this.pacienteService.getParametros(this.userid).subscribe({
       next: (params: any) => {
         this.parametros = <Parametros> params;
-        console.log();
       },
       error: (e: any) => {
         const errorMessage = e.message || 'Error desconocido';
@@ -36,11 +37,11 @@ export class UpdateParametrosComponent {
     });
    }
 
-   onSubmit(){
+  onSubmit(){
 
+    //Actualiza parametros para paciente id
     this.pacienteService.updateParametros(this.parametros).subscribe({
       next: (any) => {
-        //this.router.navigateByUrl('/cuentas');
         this.snackbar.open('Parámetros actualizados', '', {
           duration: 3000
         });
@@ -52,7 +53,9 @@ export class UpdateParametrosComponent {
       }
     });
    }
-   back() {
+
+  //Carga el componente anterior
+  back() {
     this._location.back();
   }
 }

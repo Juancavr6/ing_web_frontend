@@ -1,0 +1,57 @@
+
+
+#patients {
+    width: 60%;
+
+    margin:auto;
+    text-align: center;
+
+    background-color: #f4f4f4;
+
+    border-radius: 11px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+
+}
+
+#patients div mat-list-item{
+    text-align: center;
+    margin: auto;
+    border-radius: 10px;
+    width: 50%;
+    background-color: #d6d6d6;
+    
+}
+#patients div mat-list-item div{
+
+    width:60% ;
+    
+    
+}
+
+#patients div mat-list-item button{
+
+    background-color: #eaeaea;
+    margin-left:5%;
+    border-radius: 5px;
+    
+}
+
+.list-bt{
+    float: left;
+}
+
+
+
+
+.bar{
+    background-color: #21b78d;
+   }
+#buttons{
+    margin: auto;
+    color: #ffff;
+}
+.bt{
+    font-size: large;
+    background-color: #116950;
+    margin: 5%;
+}

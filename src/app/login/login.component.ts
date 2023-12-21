@@ -30,6 +30,7 @@ export class LoginComponent {
 
   onSubmit() {
 
+     //Obtiene pass desde /login/tipo/id
     this.loginService.getPassword(this.userid,this.tipo).subscribe({
       next: (data: any) => {
         if(<string> this.pass == <string> data) {this.router.navigate(['/'+this.tipo+'/'+this.userid]);}
